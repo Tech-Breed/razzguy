@@ -1,0 +1,10 @@
+first step
+
+install xampp local host to the local disk
+start control panel
+download the "skeleton" wordpress from wordpress.com
+copy wordpress folder to htdocs in xampp folder
+rename wordpress folder to our site name
+on your browser, enter localhost/sitename to visit default site
+install wordpress as being requested by localhost
+from your dashboard, edit your site to your taste
