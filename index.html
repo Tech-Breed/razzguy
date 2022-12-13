@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet"  href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.9.1/bootstrap-icons.css" >
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <link rel="icon" type="image/x-icon"  href="IMG-20221209-WA0051.jpg">   
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+    $(window).on('scroll',function(){
+        if($(window).scrollTop()){
+            $('nav').addClass('black');
+        }
+        else{
+            $('nav').removeClass('black');
+        }
+    })
+/*menu button onclick function*/         $(document).ready(function(){
+            $('.menu h4').click(function(){
+                $("nav ul").toggleClass("active")
+        })
+        })
+    </script>
+
+    <title>MOTE'S_DELICACY</title>
+    
+    <style>
+        body{
+  margin: 0;
+  padding: 0;
+    font-family: sans-serif;
+}
+
+/* tags */
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+
+/* a */
+a{
+    color: orange;
+}
+
+
+/* nav bar */
+.responsive-bar{
+    display: none;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+nav.black{
+    background: rgba(129, 121, 121, 0.8);
+    height: 80px;
+    padding: 10px 50px;
+}
+nav .logo{
+    float: left;
+}
+nav .logo img{
+    height: 80px;
+    transition: .5s;
+}
+nav.black .logo img{
+    height: 60px;
+}
+nav > ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    float: right;
+}
+nav > ul > li{
+    list-style: none;
+    display: inline-block;
+}
+nav > ul > li > a:hover{
+    background: #f00;
+    color: #fff;
+}
+nav > ul > li > a{
+    color: #262626;
+    text-decoration: none;
+    text-transform: uppercase; /*for capitalisation of letters */
+    line-height: 80px;
+    padding: 5px 20px;
+    transition: .5s;   
+}
+nav.black > ul > li > a{
+    color: #fff;
+    line-height: 60px;
+}
+
+
+@media(max-width:768px){
+    .responsive-bar{
+        display: block;
+        width: 100%;
+        height: 60px;
+        background: #262626;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 5px 20px;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    .responsive-bar .logo img{
+        float: left;
+        height: 50px;  
+    }
+    .responsive-bar .menu h4{
+        float: right;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    nav{
+        padding: 0;
+    }
+    nav,
+    nav.black{
+    background: #262626;
+    height: 60px;
+    padding: 0;
+    }
+    nav .logo{
+        display: none;
+    }
+    nav ul{
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        background: #262626;
+        float: none;
+        display: none;
+    }
+    nav ul.active{
+        display: block;
+    }
+    nav ul li{
+        width: 100%;
+    }
+    nav ul li a{
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 30px !important;
+        color: #fff;
+        
+    }
+
+    nav > ul{
+        width: 100%;
+        display: none;
+    }
+    nav > ul > li{
+        display: block;
+        text-align: center;
+    }
+    .active{
+        display: block;
+    }
+}
+
+/* page content */
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* media */
+
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="responsive-bar">
+        <div class="logo">
+            <img src="IMG-20221209-WA0051.jpg" alt="logo"/>
+            </div>
+            <div class="menu">
+            <h4>Menu</h4>
+            </div>
+        </div>
+    <nav>
+            <div class="logo">
+            <img src="IMG-20221209-WA0051.jpg" alt="logo"/>
+            </div>
+
+         <ul>
+             <li><a href="#about us
+              ">About us</a></li>
+             <li><a href="#services">Services</a></li>
+             <li><a href="#contact us">Contact Us</a></li>
+             <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       <DIv style="text-align: center; background-color: black; color: orange; padding-top: 6px; padding-bottom: 6px;">
+         <!-- header -->
+         <h1>MOTE'S_DELICACY</h1>
+       </DIv>
+       <br>
+       <br>
+       <br>
+
+
+
+<!-- !PAGE CONTENT! -->
+
+       <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="rice&stew.jpg" alt="ric&stew" style="width:100%">
+      <h3>The Perfect Rice & Stew</h3>
+      <p></p>
+    </div>
+
+    <div class="w3-quarter">
+      <img src="pepperd_chicken&spag.jpg" alt="Steak" style="width:100%">
+      <h3>pepperd chicken & spag</h3>
+      <p></p>
+    </div>
+
+    <div class="w3-quarter">
+      <img src="pepperd_chicken_jellof-rice.jpg" alt="Cherries" style="width:100%">
+      <h3> Salads & Jellof Rice</h3>
+      <p></p>
+      <p>What else?</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="pepperd_indomie.jpg" alt="Pasta and Wine" style="width:100%">
+      <h3> Garnished Indomie & Egg </h3>
+      <p></p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="jellof&fried_combo.jpg" alt="Popsicle" style="width:100%">
+      <h3> Jellof & Fried Big Combo</h3>
+      <p></p>
+    </div>
+
+    <div class="w3-quarter">
+      <img src="jellof-rice.jpg" alt="Salmon" style="width:100%">
+      <h3> Jellof Rice and Pepperd Fish </h3>
+      <p></p>
+    </div>
+
+    <div class="w3-quarter">
+      <img src="indomie&egg.jpg" alt="Sandwich" style="width:100%">
+      <h3>The Perfect Indomie</h3>
+      <p></p>
+    </div>
+
+    <div class="w3-quarter">
+      <img src="jellof.jpg" alt="Croissant" style="width:100%">
+      <h3>Le French</h3>
+      <p></p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+    <hr id="about">
+  
+    <!-- About Section -->
+    <div class="w3-container w3-padding-32 w3-center" id="about us">  
+      <h3 style="color: orange;">About Me, The Food Woman</h3><br>
+      <img src="IMG-20221212-WA0027.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+      <div class="w3-padding-32">
+        <h4 style="color: orange;"><b>I am Who I Am!</b></h4>
+        <h6><i>With Passion For Real, Good Food</i></h6>
+        <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of food. I want to share my world with you. </p>
+      </div>
+    </div>
+    <hr>
+
+
+
+    <p><a href="menu.html" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
+</div>
+</header>
+<br>
+
+<h1 style="color: orange; text-align: center;"><b>Opening Hours</b></h1>
+    
+<div class="w3-row">
+  <div style="font-size: large; font-weight: bold; text-align: center;" class="w3-col s6">
+    <p>Mon & Fri</p>
+    <p>Sat - Sun</p>
+  </div>
+  <div style="font-weight: bold;" class="w3-col s6">
+    <p> 10:00am - 4:00pm</p>
+    <p>Saturday 12:00pm - 4:00pm</p>
+    <p></p>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+
+    <div>
+      <h1 style="text-align: center;"><b>Place Orders</b></h1>
+
+      <h5 style="padding: 20px 20px;">We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us:</h5>
+    </div>
+
+
+<form action="/action_page.php" target="_blank">
+  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+  <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+  <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+  <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+  <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+</form>
+</div>
+</div>
+
+
+<div>
+
+  <script>
+
+    
+  </script>
+
+  
+</div>
+
+
+    
+    <!-- Footer -->
+    <div style="margin-left: 20px;">
+      <div class="w3-third w3-serif">
+        <h3 id="services"> Services </h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Food Tray</span>
+
+           <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Birthdays</span> 
+           
+           <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">House Parties</span>
+
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Convocations</span> 
+          
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Corporate-Functions</span>
+          
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bulk Lunch-Pack</span>
+
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Single Lunch-Pack</span> 
+          
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Soup Bowels</span>  
+          
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Birthdays & Events</span>
+          
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Others</span>
+        </p>
+      </div>
+    </div>
+    <br>
+
+    <div class="footer-basic" id="contact us">
+      <footer>
+          <div class="social">
+            
+
+            <a href="nengimotefyne@gmail.com"><i style="color: red;" class="bi bi-envelope "></i></a>
+            
+           <a href="https://wa.me/2348180742306"><i style="color: green;" class="icon ion-social-whatsapp"></i></a></div>
+         
+          <p style="font-weight: bold; font-size: large; color: orange;" class="copyright">MOTE'S_DELICACY © 2022</p>
+      </footer>
+  </div>
+ 
+
+
+
+
+
+  <!-- End page content -->
+  </div>
+  
+  <script>
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+   
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+  
+
+
+
+
+
+</body>
+</html>
